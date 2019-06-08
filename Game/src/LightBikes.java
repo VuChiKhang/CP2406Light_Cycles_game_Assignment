@@ -85,3 +85,58 @@ public class LightBikes extends JFrame implements KeyListener, MouseListener {
         gameGrid.addMouseListener(this);
         gameGrid.requestFocus();
     }
+    /**
+     * Key listeners to listen for user input to control the bike.
+     */
+    @Override
+    public void keyPressed(KeyEvent ke){
+
+        if(ke.getKeyCode() == KeyEvent.VK_RIGHT){
+            gameGrid.turnEast();
+        }
+        else if(ke.getKeyCode() == KeyEvent.VK_LEFT) {
+            gameGrid.turnWest();
+        }
+        else if(ke.getKeyCode() == KeyEvent.VK_UP) {
+            gameGrid.turnNorth();
+        }
+        else if(ke.getKeyCode() == KeyEvent.VK_DOWN) {
+            gameGrid.turnSouth();
+        }
+    }
+
+    @Override
+    public void mouseEntered(MouseEvent e) {
+        gameGrid.requestFocus();
+    }
+
+    @Override
+    public void keyReleased(KeyEvent ke){
+
+    }
+
+    @Override
+    public void keyTyped(KeyEvent ke){
+
+    }
+
+    @Override
+    public void mouseClicked(MouseEvent e) {
+
+    }
+
+    @Override
+    public void mousePressed(MouseEvent e) {
+
+    }
+
+    @Override
+    public void mouseReleased(MouseEvent e) {
+
+    }
+
+    @Override
+    public void mouseExited(MouseEvent e) {
+
+    }
+}
